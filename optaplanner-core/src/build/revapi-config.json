@@ -1,0 +1,1234 @@
+{
+  "revapi": {
+    "java": {
+      "filter": {
+        "packages": {
+          "comment": "We don't want to check transitive classes, since we already check them in their own module.",
+          "regex": true,
+          "include": [
+            "org\\.optaplanner\\.core\\.api.*",
+            "org\\.optaplanner\\.core\\.config.*"
+          ]
+        }
+      }
+    },
+    "_comment": "Changes between 6.4.0.Final and master. These changes are desired and thus ignored. They should be removed when 7.0.0.Final is available.",
+    "ignore": [
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore::parseScore(int, int, java.lang.String)",
+        "new": "method org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore::parseScore(java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore::valueOf(long[], long[])",
+        "new": "method org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore::valueOf(int, long[], long[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScoreHolder::setHardScore(int, long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScoreHolder::setSoftScore(int, long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScore org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScore::valueOf(int, int, int)",
+        "new": "method org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScore org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScore::valueOf(int, int, int, int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScoreHolder::setHardScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScoreHolder::setMediumScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScoreHolder::setSoftScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScore org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScore::valueOf(long, long, long)",
+        "new": "method org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScore org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScore::valueOf(int, long, long, long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScoreHolder::setHardScore(long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScoreHolder::setMediumScore(long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardmediumsoftlong.HardMediumSoftLongScoreHolder::setSoftScore(long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore::valueOf(int, int)",
+        "new": "method org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore::valueOf(int, int, int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder::setHardScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder::setSoftScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScore org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScore::valueOf(java.math.BigDecimal, java.math.BigDecimal)",
+        "new": "method org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScore org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScore::valueOf(int, java.math.BigDecimal, java.math.BigDecimal)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScoreHolder::setHardScore(java.math.BigDecimal)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardsoftbigdecimal.HardSoftBigDecimalScoreHolder::setSoftScore(java.math.BigDecimal)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScore org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScore::valueOf(double, double)",
+        "new": "method org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScore org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScore::valueOf(int, double, double)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScoreHolder::setHardScore(double)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardsoftdouble.HardSoftDoubleScoreHolder::setSoftScore(double)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScore org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScore::valueOf(long, long)",
+        "new": "method org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScore org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScore::valueOf(int, long, long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScoreHolder::setHardScore(long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScoreHolder::setSoftScore(long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.simple.SimpleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.simple.SimpleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.simple.SimpleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.simple.SimpleScore org.optaplanner.core.api.score.buildin.simple.SimpleScore::valueOf(int)",
+        "new": "method org.optaplanner.core.api.score.buildin.simple.SimpleScore org.optaplanner.core.api.score.buildin.simple.SimpleScore::valueOf(int, int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.simple.SimpleScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.simple.SimpleScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.simple.SimpleScoreHolder::setScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScore org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScore::valueOf(java.math.BigDecimal)",
+        "new": "method org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScore org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScore::valueOf(int, java.math.BigDecimal)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.simplebigdecimal.SimpleBigDecimalScoreHolder::setScore(java.math.BigDecimal)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScore org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScore::valueOf(double)",
+        "new": "method org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScore org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScore::valueOf(int, double)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.simpledouble.SimpleDoubleScoreHolder::setScore(double)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeChanged",
+        "old": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===java.lang.String[]===)",
+        "new": "method parameter java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(===boolean===, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScore org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScore::valueOf(long)",
+        "new": "method org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScore org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScore::valueOf(int, long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.simplelong.SimpleLongScoreHolder::setScore(long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.holder.ScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.holder.ScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.addedToInterface",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.solver.Solver<Solution_>::getBestScore()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeChanged",
+        "old": "method Solution_ org.optaplanner.core.api.solver.Solver<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::getBestSolution()",
+        "new": "method Solution_ org.optaplanner.core.api.solver.Solver<Solution_>::getBestSolution()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method org.optaplanner.core.impl.score.director.ScoreDirectorFactory org.optaplanner.core.api.solver.Solver<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::getScoreDirectorFactory()",
+        "new": "method org.optaplanner.core.impl.score.director.ScoreDirectorFactory<Solution_> org.optaplanner.core.api.solver.Solver<Solution_>::getScoreDirectorFactory()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeChanged",
+        "old": "method Solution_ org.optaplanner.core.api.solver.Solver<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::solve(Solution_)",
+        "new": "method Solution_ org.optaplanner.core.api.solver.Solver<Solution_>::solve(Solution_)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "class org.optaplanner.core.api.solver.Solver<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>",
+        "new": "class org.optaplanner.core.api.solver.Solver<Solution_ extends java.lang.Object>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method org.optaplanner.core.api.solver.Solver<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::buildSolver()",
+        "new": "method org.optaplanner.core.api.solver.Solver<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::buildSolver()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::cloneSolverFactory()",
+        "new": "method org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::cloneSolverFactory()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createEmpty()",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createEmpty()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createEmpty()",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createEmpty()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createEmpty(java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createEmpty(java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createEmpty(java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createEmpty(java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromKieContainerXmlResource(java.lang.String)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromKieContainerXmlResource(java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromKieContainerXmlResource(java.lang.String)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromKieContainerXmlResource(java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromKieContainerXmlResource(org.kie.api.builder.ReleaseId, java.lang.String)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromKieContainerXmlResource(org.kie.api.builder.ReleaseId, java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromKieContainerXmlResource(org.kie.api.builder.ReleaseId, java.lang.String)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromKieContainerXmlResource(org.kie.api.builder.ReleaseId, java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromKieContainerXmlResource(org.kie.api.runtime.KieContainer, java.lang.String)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromKieContainerXmlResource(org.kie.api.runtime.KieContainer, java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromKieContainerXmlResource(org.kie.api.runtime.KieContainer, java.lang.String)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromKieContainerXmlResource(org.kie.api.runtime.KieContainer, java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlFile(java.io.File)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlFile(java.io.File)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlFile(java.io.File)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlFile(java.io.File)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlFile(java.io.File, java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlFile(java.io.File, java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlFile(java.io.File, java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlFile(java.io.File, java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlInputStream(java.io.InputStream)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlInputStream(java.io.InputStream)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlInputStream(java.io.InputStream)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlInputStream(java.io.InputStream)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlInputStream(java.io.InputStream, java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlInputStream(java.io.InputStream, java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlInputStream(java.io.InputStream, java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlInputStream(java.io.InputStream, java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlReader(java.io.Reader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlReader(java.io.Reader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlReader(java.io.Reader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlReader(java.io.Reader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlReader(java.io.Reader, java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlReader(java.io.Reader, java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlReader(java.io.Reader, java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlReader(java.io.Reader, java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlResource(java.lang.String)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlResource(java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlResource(java.lang.String)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlResource(java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlResource(java.lang.String, java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlResource(java.lang.String, java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::createFromXmlResource(java.lang.String, java.lang.ClassLoader)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_> org.optaplanner.core.api.solver.SolverFactory<Solution_>::createFromXmlResource(java.lang.String, java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "class org.optaplanner.core.api.solver.SolverFactory<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>",
+        "new": "class org.optaplanner.core.api.solver.SolverFactory<Solution_ extends java.lang.Object>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeChanged",
+        "old": "method Solution_ org.optaplanner.core.api.solver.event.BestSolutionChangedEvent<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::getNewBestSolution()",
+        "new": "method Solution_ org.optaplanner.core.api.solver.event.BestSolutionChangedEvent<Solution_>::getNewBestSolution()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "class org.optaplanner.core.api.solver.event.BestSolutionChangedEvent<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>",
+        "new": "class org.optaplanner.core.api.solver.event.BestSolutionChangedEvent<Solution_ extends java.lang.Object>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "class org.optaplanner.core.api.solver.event.SolverEventListener<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>",
+        "new": "class org.optaplanner.core.api.solver.event.SolverEventListener<Solution_ extends java.lang.Object>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.config.phase.PhaseConfig<C extends org.optaplanner.core.config.phase.PhaseConfig>::configurePhase(org.optaplanner.core.impl.phase.AbstractPhase, int, org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination) @ org.optaplanner.core.config.constructionheuristic.ConstructionHeuristicPhaseConfig",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method org.optaplanner.core.config.constructionheuristic.placer.EntityPlacerConfig org.optaplanner.core.config.constructionheuristic.ConstructionHeuristicType::newEntityPlacerConfig()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor org.optaplanner.core.config.domain.ScanAnnotatedClassesConfig::buildSolutionDescriptor(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor org.optaplanner.core.config.domain.ScanAnnotatedClassesConfig::buildSolutionDescriptor(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.impl.score.definition.ScoreDefinition)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method java.lang.Class<? extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.config.domain.ScanAnnotatedClassesConfig::loadSolutionClass(org.reflections.Reflections)",
+        "new": "method java.lang.Class<?> org.optaplanner.core.config.domain.ScanAnnotatedClassesConfig::loadSolutionClass(org.reflections.Reflections)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.config.phase.PhaseConfig<C extends org.optaplanner.core.config.phase.PhaseConfig>::configurePhase(org.optaplanner.core.impl.phase.AbstractPhase, int, org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination) @ org.optaplanner.core.config.exhaustivesearch.ExhaustiveSearchPhaseConfig",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method org.optaplanner.core.impl.heuristic.selector.common.decorator.SelectionSorter org.optaplanner.core.config.heuristic.selector.entity.EntitySorterManner::determineSorter(org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method boolean org.optaplanner.core.config.heuristic.selector.entity.EntitySorterManner::hasSorter(org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method org.optaplanner.core.impl.heuristic.selector.common.decorator.SelectionSorter org.optaplanner.core.config.heuristic.selector.value.ValueSorterManner::determineSorter(org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method boolean org.optaplanner.core.config.heuristic.selector.value.ValueSorterManner::hasSorter(org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.config.phase.PhaseConfig<C extends org.optaplanner.core.config.phase.PhaseConfig>::configurePhase(org.optaplanner.core.impl.phase.AbstractPhase, int, org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination) @ org.optaplanner.core.config.localsearch.LocalSearchPhaseConfig",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.field.removed",
+        "old": "field org.optaplanner.core.config.localsearch.decider.acceptor.AcceptorConfig.lateSimulatedAnnealingSize",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.Integer org.optaplanner.core.config.localsearch.decider.acceptor.AcceptorConfig::getLateSimulatedAnnealingSize()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.config.localsearch.decider.acceptor.AcceptorConfig::setLateSimulatedAnnealingSize(java.lang.Integer)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.field.removed",
+        "old": "field org.optaplanner.core.config.localsearch.decider.acceptor.AcceptorType.LATE_SIMULATED_ANNEALING",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.class.removed",
+        "old": "class org.optaplanner.core.config.localsearch.decider.deciderscorecomparator.DeciderScoreComparatorFactoryConfig",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.class.removed",
+        "old": "class org.optaplanner.core.config.localsearch.decider.deciderscorecomparator.DeciderScoreComparatorFactoryType",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.config.phase.PhaseConfig<C extends org.optaplanner.core.config.phase.PhaseConfig>::configurePhase(org.optaplanner.core.impl.phase.AbstractPhase, int, org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.config.phase.PhaseConfig<C extends org.optaplanner.core.config.phase.PhaseConfig>::configurePhase(org.optaplanner.core.impl.phase.AbstractPhase, int, org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination) @ org.optaplanner.core.config.phase.custom.CustomPhaseConfig",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildDroolsScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildDroolsScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterAdded",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildDroolsScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildDroolsScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildEasyScoreDirectorFactory()",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildEasyScoreDirectorFactory()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterAdded",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildEasyScoreDirectorFactory()",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildEasyScoreDirectorFactory()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildIncrementalScoreDirectorFactory()",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildIncrementalScoreDirectorFactory()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterAdded",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildIncrementalScoreDirectorFactory()",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildIncrementalScoreDirectorFactory()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method org.optaplanner.core.impl.score.definition.ScoreDefinition org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDefinition()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor)",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor<Solution_>)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterAdded",
+        "old": "method org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor)",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor<Solution_>)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor, org.optaplanner.core.impl.score.definition.ScoreDefinition)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method double org.optaplanner.core.config.score.trend.InitializingScoreTrendLevel::getOptimisticBoundDouble()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method int org.optaplanner.core.config.score.trend.InitializingScoreTrendLevel::getOptimisticBoundInt()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method long org.optaplanner.core.config.score.trend.InitializingScoreTrendLevel::getOptimisticBoundLong()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method double org.optaplanner.core.config.score.trend.InitializingScoreTrendLevel::getPessimisticBoundDouble()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method int org.optaplanner.core.config.score.trend.InitializingScoreTrendLevel::getPessimisticBoundInt()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method long org.optaplanner.core.config.score.trend.InitializingScoreTrendLevel::getPessimisticBoundLong()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller org.optaplanner.core.config.solver.SolverConfig::buildBestSolutionRecaller(org.optaplanner.core.config.solver.EnvironmentMode)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method java.util.List<org.optaplanner.core.impl.phase.Phase> org.optaplanner.core.config.solver.SolverConfig::buildPhaseList(org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination)",
+        "new": "method <Solution_> java.util.List<org.optaplanner.core.impl.phase.Phase<Solution_>> org.optaplanner.core.config.solver.SolverConfig::buildPhaseList(org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterAdded",
+        "old": "method java.util.List<org.optaplanner.core.impl.phase.Phase> org.optaplanner.core.config.solver.SolverConfig::buildPhaseList(org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination)",
+        "new": "method <Solution_> java.util.List<org.optaplanner.core.impl.phase.Phase<Solution_>> org.optaplanner.core.config.solver.SolverConfig::buildPhaseList(org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor org.optaplanner.core.config.solver.SolverConfig::buildSolutionDescriptor(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method <Solution_> org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolutionDescriptor(org.optaplanner.core.config.SolverConfigContext)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterAdded",
+        "old": "method org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor org.optaplanner.core.config.solver.SolverConfig::buildSolutionDescriptor(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method <Solution_> org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolutionDescriptor(org.optaplanner.core.config.SolverConfigContext)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.Solver<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolver(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.Solver<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolver(org.optaplanner.core.config.SolverConfigContext)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.Solver<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolver(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method <Solution_> org.optaplanner.core.api.solver.Solver<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolver(org.optaplanner.core.config.SolverConfigContext)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.Solver<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolver()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method <Solution_ extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.api.solver.Solver<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolver(java.lang.ClassLoader)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeTypeParametersChanged",
+        "old": "method java.lang.Class<? extends org.optaplanner.core.api.domain.solution.Solution> org.optaplanner.core.config.solver.SolverConfig::getSolutionClass()",
+        "new": "method java.lang.Class<?> org.optaplanner.core.config.solver.SolverConfig::getSolutionClass()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method long org.optaplanner.core.config.util.ConfigUtils::floorDivide(long, long)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.class.removed",
+        "old": "class org.optaplanner.core.api.domain.solution.cloner.PlanningCloneable<T extends java.lang.Object>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeChanged",
+        "old": "method Solution_ org.optaplanner.core.api.domain.solution.cloner.SolutionCloner<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>::cloneSolution(Solution_)",
+        "new": "method Solution_ org.optaplanner.core.api.domain.solution.cloner.SolutionCloner<Solution_>::cloneSolution(Solution_)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.formalTypeParameterChanged",
+        "old": "class org.optaplanner.core.api.domain.solution.cloner.SolutionCloner<Solution_ extends org.optaplanner.core.api.domain.solution.Solution>",
+        "new": "class org.optaplanner.core.api.domain.solution.cloner.SolutionCloner<Solution_ extends java.lang.Object>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.returnTypeChanged",
+        "old": "method org.optaplanner.core.api.domain.variable.CustomShadowVariable.Source[] org.optaplanner.core.api.domain.variable.CustomShadowVariable::sources()",
+        "new": "method org.optaplanner.core.api.domain.variable.PlanningVariableReference[] org.optaplanner.core.api.domain.variable.CustomShadowVariable::sources()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method void org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::<init>()",
+        "new": "method void org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::<init>(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.visibilityReduced",
+        "old": "method void org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::<init>()",
+        "new": "method void org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::<init>(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(java.lang.String[])",
+        "new": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(boolean, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.nowAbstract",
+        "old": "method boolean org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::isCompatibleArithmeticArgument(org.optaplanner.core.api.score.Score)",
+        "new": "method boolean org.optaplanner.core.api.score.Score<S extends org.optaplanner.core.api.score.Score>::isCompatibleArithmeticArgument(org.optaplanner.core.api.score.Score) @ org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.abstractMethodAdded",
+        "new": "method S org.optaplanner.core.api.score.Score<S extends org.optaplanner.core.api.score.Score>::toInitializedScore() @ org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.addedToInterface",
+        "new": "method int org.optaplanner.core.api.score.Score<S extends org.optaplanner.core.api.score.Score>::getInitScore() @ org.optaplanner.core.api.score.FeasibilityScore<S extends org.optaplanner.core.api.score.FeasibilityScore>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.addedToInterface",
+        "new": "method boolean org.optaplanner.core.api.score.Score<S extends org.optaplanner.core.api.score.Score>::isSolutionInitialized() @ org.optaplanner.core.api.score.FeasibilityScore<S extends org.optaplanner.core.api.score.FeasibilityScore>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.addedToInterface",
+        "new": "method S org.optaplanner.core.api.score.Score<S extends org.optaplanner.core.api.score.Score>::toInitializedScore() @ org.optaplanner.core.api.score.FeasibilityScore<S extends org.optaplanner.core.api.score.FeasibilityScore>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.addedToInterface",
+        "new": "method int org.optaplanner.core.api.score.Score<S extends org.optaplanner.core.api.score.Score>::getInitScore()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.addedToInterface",
+        "new": "method boolean org.optaplanner.core.api.score.Score<S extends org.optaplanner.core.api.score.Score>::isSolutionInitialized()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.addedToInterface",
+        "new": "method S org.optaplanner.core.api.score.Score<S extends org.optaplanner.core.api.score.Score>::toInitializedScore()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendable.BendableScore::<init>(int[], int[])",
+        "new": "method void org.optaplanner.core.api.score.buildin.bendable.BendableScore::<init>(int, int[], int[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.bendable.BendableScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.bendable.BendableScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.bendable.BendableScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.bendable.BendableScore org.optaplanner.core.api.score.buildin.bendable.BendableScore::parseScore(int, int, java.lang.String)",
+        "new": "method org.optaplanner.core.api.score.buildin.bendable.BendableScore org.optaplanner.core.api.score.buildin.bendable.BendableScore::parseScore(java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.bendable.BendableScore org.optaplanner.core.api.score.buildin.bendable.BendableScore::valueOf(int[], int[])",
+        "new": "method org.optaplanner.core.api.score.buildin.bendable.BendableScore org.optaplanner.core.api.score.buildin.bendable.BendableScore::valueOf(int, int[], int[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.bendable.BendableScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.bendable.BendableScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendable.BendableScoreHolder::setHardScore(int, int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendable.BendableScoreHolder::setSoftScore(int, int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore::<init>(java.math.BigDecimal[], java.math.BigDecimal[])",
+        "new": "method void org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore::<init>(int, java.math.BigDecimal[], java.math.BigDecimal[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::buildScorePattern(int) @ org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, int) @ org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method java.lang.String[] org.optaplanner.core.api.score.AbstractScore<S extends org.optaplanner.core.api.score.Score>::parseLevelStrings(java.lang.Class<? extends org.optaplanner.core.api.score.Score>, java.lang.String, java.lang.String[]) @ org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore::parseScore(int, int, java.lang.String)",
+        "new": "method org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore::parseScore(java.lang.String)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore::valueOf(java.math.BigDecimal[], java.math.BigDecimal[])",
+        "new": "method org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScore::valueOf(int, java.math.BigDecimal[], java.math.BigDecimal[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScoreHolder::extractScore()",
+        "new": "method org.optaplanner.core.api.score.Score org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScoreHolder::extractScore(int)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScoreHolder::setHardScore(int, java.math.BigDecimal)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.removed",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendablebigdecimal.BendableBigDecimalScoreHolder::setSoftScore(int, java.math.BigDecimal)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.numberOfParametersChanged",
+        "old": "method void org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore::<init>(long[], long[])",
+        "new": "method void org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore::<init>(int, long[], long[])",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.missing.newClass",
+        "new": "missing-class com.google.errorprone.annotations.CanIgnoreReturnValue",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.missing.oldClass",
+        "old": "missing-class sun.util.locale.provider.LocaleServiceProviderPool.LocalizedObjectGetter",
+        "new": "missing-class sun.util.locale.provider.LocaleServiceProviderPool.LocalizedObjectGetter",
+        "justification": "Probably a bug in revapi, nothing serious"
+      },
+      {
+        "code": "java.missing.newClass",
+        "old": "missing-class sun.util.locale.provider.LocaleServiceProviderPool.LocalizedObjectGetter",
+        "new": "missing-class sun.util.locale.provider.LocaleServiceProviderPool.LocalizedObjectGetter",
+        "justification": "Probably a bug in revapi, nothing serious"
+      },
+      {
+        "code": "java.annotation.noLongerPresent",
+        "old": "class org.optaplanner.core.api.domain.variable.CustomShadowVariable.Source",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.annotation.attributeValueChanged",
+        "old": "class org.optaplanner.core.config.phase.PhaseConfig<C extends org.optaplanner.core.config.phase.PhaseConfig>",
+        "new": "class org.optaplanner.core.config.phase.PhaseConfig<C extends org.optaplanner.core.config.phase.PhaseConfig>",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.elementNowParameterized",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildDroolsScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildDroolsScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.elementNowParameterized",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildEasyScoreDirectorFactory()",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildEasyScoreDirectorFactory()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.elementNowParameterized",
+        "old": "method org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildIncrementalScoreDirectorFactory()",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.AbstractScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildIncrementalScoreDirectorFactory()",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeParameterChanged",
+        "old": "method parameter org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, ===org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor===)",
+        "new": "method parameter <Solution_> org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, ===org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor<Solution_>===)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.elementNowParameterized",
+        "old": "method org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor)",
+        "new": "method <Solution_> org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory<Solution_> org.optaplanner.core.config.score.director.ScoreDirectorFactoryConfig::buildScoreDirectorFactory(org.optaplanner.core.config.SolverConfigContext, org.optaplanner.core.config.solver.EnvironmentMode, org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor<Solution_>)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.elementNowParameterized",
+        "old": "method java.util.List<org.optaplanner.core.impl.phase.Phase> org.optaplanner.core.config.solver.SolverConfig::buildPhaseList(org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination)",
+        "new": "method <Solution_> java.util.List<org.optaplanner.core.impl.phase.Phase<Solution_>> org.optaplanner.core.config.solver.SolverConfig::buildPhaseList(org.optaplanner.core.config.heuristic.policy.HeuristicConfigPolicy, org.optaplanner.core.impl.solver.recaller.BestSolutionRecaller, org.optaplanner.core.impl.solver.termination.Termination)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.generics.elementNowParameterized",
+        "old": "method org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor org.optaplanner.core.config.solver.SolverConfig::buildSolutionDescriptor(org.optaplanner.core.config.SolverConfigContext)",
+        "new": "method <Solution_> org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor<Solution_> org.optaplanner.core.config.solver.SolverConfig::buildSolutionDescriptor(org.optaplanner.core.config.SolverConfigContext)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      },
+      {
+        "code": "java.method.parameterTypeParameterChanged",
+        "old": "method parameter void org.optaplanner.core.config.solver.SolverConfig::setSolutionClass(===java.lang.Class<? extends org.optaplanner.core.api.domain.solution.Solution>===)",
+        "new": "method parameter void org.optaplanner.core.config.solver.SolverConfig::setSolutionClass(===java.lang.Class<?>===)",
+        "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
+      }
+    ]
+  }
+}
