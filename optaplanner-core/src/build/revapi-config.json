@@ -1153,7 +1153,7 @@
         "new": "method void org.optaplanner.core.api.score.buildin.bendablelong.BendableLongScore::<init>(int, long[], long[])",
         "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
       },
-      {
+      /*{
         "code": "java.missing.newClass",
         "new": "missing-class com.google.errorprone.annotations.CanIgnoreReturnValue",
         "justification": "ADD YOUR EXPLANATION FOR THE NECESSITY OF THIS CHANGE"
@@ -1169,7 +1169,7 @@
         "old": "missing-class sun.util.locale.provider.LocaleServiceProviderPool.LocalizedObjectGetter",
         "new": "missing-class sun.util.locale.provider.LocaleServiceProviderPool.LocalizedObjectGetter",
         "justification": "Probably a bug in revapi, nothing serious"
-      },
+      },*/
       {
         "code": "java.annotation.noLongerPresent",
         "old": "class org.optaplanner.core.api.domain.variable.CustomShadowVariable.Source",
